@@ -1,0 +1,21 @@
+**INSTRUCTIONS**
+You are given an image of size 1024x1024 that was generated from the above support image. The image contains a sequence of characters clearly written, distorted, stylized, or blended with the environment (background or object) as a visual illusion.
+The support context only consists of top-left corner point of the bounding box.
+
+**TASK**
+Think and analyze the image carefully. Using the support context as a reference, detect the sequence of characters and provide a single bounding box that encloses all of its characters with detailed reasoning.
+
+Return the result as a valid JSON list. If no sequence is confidently located, return empty list [].
+
+**JSON output format**
+```json
+{
+    "sequence": "The sequence of characters you read and detected",
+    "reasoning": "Explain the visual evidence for this detection.",
+    "x1": int,
+    "y1": int,
+    "x2": int,
+    "y2": int
+}
+```
+

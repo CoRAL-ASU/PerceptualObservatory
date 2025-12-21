@@ -1,0 +1,7 @@
+**CONTEXT**
+You are given an image of size 1024x1024 of a case sensitive sequence of characters, "[WORD_LABEL]". The following text provides context for the sequence visible in this image, defining the characters and their precise bounding box. This information serves as a factual reference.
+
+Attributes:
+```json
+[BBOX]
+```

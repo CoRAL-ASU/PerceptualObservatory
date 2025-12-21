@@ -1,0 +1,7 @@
+**CONTEXT**
+You are given an image of size 1024x1024 of a famous person, "[CELEB_LABEL]". The following text provides context for the key features present in this image, listing each attribute with its precise bounding box coordinates. This information serves as a factual reference.
+
+Attributes:
+```json
+[BBOX]
+```

@@ -1,0 +1,4 @@
+**CONTEXT**
+You are given an image of size 1024x1024 of a famous person. This information serves as a factual reference.
+Additionally, you will further be given 4 images, only one of them is generated from this image, where a face might be clearly visible, perturbed, stylized, or blended with the environment (background or object) as a visual illusion.
+

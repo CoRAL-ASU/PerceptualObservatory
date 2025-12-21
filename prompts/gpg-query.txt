@@ -1,0 +1,22 @@
+**INSTRUCTIONS**
+You are given an image of size 1024x1024 that is composed of 4 sub-images arranged in a 2x2 grid as a collage.
+Only one of these sub-images is the *source image* from which the support image was generated.
+
+**TASK**
+Identify and locate which grid cell contains the source image.
+Coordinates mapping:
+[0,0] = top-left
+[0,1] = top-right
+[1,0] = bottom-left
+[1,1] = bottom-right
+
+Return the result as valid JSON with detailed reasoning.
+
+**JSON output format**
+```json
+{
+  "reasoning": "Provide a structured explanation based on visual cues. Cite concrete visual evidence and justify your identification.",
+  "final_answer": "[0,0]" or "[0,1]" or "[1,0]" or "[1,1]"
+}
+```
+

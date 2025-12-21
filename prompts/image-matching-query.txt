@@ -1,0 +1,15 @@
+**INSTRUCTIONS**
+You are given 4 images each of size 1024x1024.
+
+**TASK**
+Compare the support image with 4 candidate images, and select a single candidate image that best matches the support image.
+
+Return the result as valid JSON with detailed reasoning.
+
+**JSON output format**
+```json
+{
+  "reasoning": "Provide a structured explanation based on visual cues. Cite concrete visual evidence and justify your identification.",
+  "final_answer": "A" or "B" or "C" or "D"
+}
+```

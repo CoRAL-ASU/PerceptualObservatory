@@ -1,0 +1,47 @@
+**INSTRUCTIONS**
+You are given an image of size 1024x1024 that was generated from the above support image. A face is present in this image. The face might be clearly visible, perturbed, stylized, or blended with the environment (background or object) as a visual illusion.
+The support context only consists of one key feature's bounding box.
+
+**TASK**
+Think and analyze the image carefully. Using the support context as a reference, detect the bounding boxes and provide detailed reasoning for each discernable facial attributes:
+1. Left Eye
+2. Right Eye
+3. Nose
+4. Mouth
+
+Return the result as a valid JSON list. Your reasoning must explain how you identified the attribute, and only include the attribute that you can detect. If no attributes are confidently located, return empty list [].
+
+**JSON output format**
+```json
+{
+    "left_eye": {
+        "reasoning": "Explain the visual evidence for this detection.",
+        "x1": int,
+        "y1": int,
+        "x2": int,
+        "y2": int
+    },
+    "right_eye": {
+        "reasoning": "Explain the visual evidence for this detection.",
+        "x1": int,
+        "y1": int,
+        "x2": int,
+        "y2": int
+    },
+    "nose": {
+        "reasoning": "Explain the visual evidence for this detection.",
+        "x1": int,
+        "y1": int,
+        "x2": int,
+        "y2": int
+    },
+    "mouth": {
+        "reasoning": "Explain the visual evidence for this detection.",
+        "x1": int,
+        "y1": int,
+        "x2": int,
+        "y2": int
+    }
+}
+```
+

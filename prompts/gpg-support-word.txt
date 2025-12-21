@@ -1,0 +1,3 @@
+**CONTEXT**
+You are given an image of size 1024x1024. This image is a visually altered version of some original image such that the source might contain a sequence of characters that are clearly written, perturbed, stylized, or blended with the environment (background or object) as a visual illusion.
+The information serves as the support context.
