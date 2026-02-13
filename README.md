@@ -1,10 +1,38 @@
-# The Perceptual Observatory
+# The Perceptual Observatory: Characterizing Robustness and Grounding in MLLMs
 
-Characterizing robustness and grounding in multimodal large language models (MLLMs) through perception-first benchmarks and structured perturbations.
+[![arXiv](https://img.shields.io/badge/arXiv-2512.15949-b31b1b.svg)](https://arxiv.org/abs/2512.15949)
+[![Project Page](https://img.shields.io/badge/Project-Page-green)](https://coral-lab-asu.github.io/PerceptualObservatory/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
-**[Paper](https://arxiv.org/abs/2512.15949)** · **[Website](https://coral-lab-asu.github.io/PerceptualObservatory/)** · WACV 2026
+This repository contains code and resources for **The Perceptual Observatory**, a perception-first evaluation framework that characterizes **robustness** and **visual grounding** in multimodal large language models (MLLMs) under controlled perturbations.
 
-The Perceptual Observatory probes whether MLLM progress reflects true visual grounding or reliance on textual priors, via benchmarks spanning simple vision, local-to-global grounding, and robustness under pixel and diffusion-based perturbations.
+---
+
+## Abstract
+
+![arch](static/images/overview.png)
+
+Modern MLLMs keep improving on end-task benchmarks, but it can be unclear whether gains come from **genuine visual grounding** or from **text-heavy priors / world knowledge**, especially when many model families scale the language component while reusing similar vision encoders.
+
+**The Perceptual Observatory** moves beyond leaderboard accuracy by testing whether models preserve **identity**, **spatial invariance**, and **attribution fidelity** when inputs are systematically perturbed.
+
+The framework evaluates MLLMs across complementary “verticals,” including:
+
+1. **Simple Vision Skills**
+   - e.g., **face matching** and **text-in-vision comprehension** to probe basic perceptual capabilities.
+
+2. **Local-to-Global Grounding**
+   - e.g., **image matching**, **grid-pointing**, and **attribute localization**, targeting grounded understanding from fine details to global scene structure.
+
+Each vertical is instantiated with **ground-truth datasets** (faces, words) and evaluated under two classes of perturbations:
+- **Low-level pixel augmentations** (controlled corruptions / transformations)
+- **High-level diffusion-based stylized “illusions”** (style-transfer perturbations)
+
+Together, these tests provide a principled lens into how current (and future) MLLMs maintain perceptual grounding and relational structure under distribution shift.
+
+---
+
 
 ## Overview
 
@@ -133,4 +161,4 @@ If you use PerceptualObservatory in your research, please cite:
 
 ## License
 
-See repository for license information.
+See repository for [LICENSE](LICENSE) information.
