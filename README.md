@@ -1,6 +1,10 @@
-# PerceptualObservatory
+# The Perceptual Observatory
 
-A research framework for evaluating vision-language models on perceptual tasks: **Image Matching**, **Grid Pointing Game**, and **Attribution/Localization**.
+Characterizing robustness and grounding in multimodal large language models (MLLMs) through perception-first benchmarks and structured perturbations.
+
+**[Paper](https://arxiv.org/abs/2512.15949)** · **[Website](https://coral-lab-asu.github.io/PerceptualObservatory/)** · WACV 2026
+
+The Perceptual Observatory probes whether MLLM progress reflects true visual grounding or reliance on textual priors, via benchmarks spanning simple vision, local-to-global grounding, and robustness under pixel and diffusion-based perturbations.
 
 ## Overview
 
@@ -12,7 +16,7 @@ PerceptualObservatory supports two stimulus domains:
 Tasks include:
 
 1. **Image Matching (IM)** — Select the candidate image that best matches a support image from a set of options
-2. **Grid Pointing Game (GPC)** — Localize a target image within a 2×2 grid
+2. **Grid Pointing Game (GPG)** — Localize a target image within a 2×2 grid
 3. **Attribution** — Attribute and localize visual features (e.g., augmented vs. illusory)
 
 ## Project Structure
@@ -31,7 +35,7 @@ PerceptualObservatory/
 │   ├── celeb_labels_gender_mapping.py
 │   ├── celeb_gender.json
 │   ├── image_matching/             # IM analysis & parsing
-│   ├── grid_pointing_game/         # GPC analysis & parsing
+│   ├── grid_pointing_game/         # GPG analysis & parsing
 │   └── attribution/                # Attribution analysis & parsing
 └── README.md
 ```
@@ -93,13 +97,13 @@ python scripts/image_matching/analysis_word_im.py
 **Grid Pointing Game** — Parse JSONL files from a folder and analyze:
 
 ```bash
-python scripts/grid_pointing_game/parse_gpc_word.py --folder ./results_gpc/word/ --out-json ./results/all_parsed_word_gpc.json
-python scripts/grid_pointing_game/analysis_word_gpc.py --parsed_json ./results/gpg/word/all_parsed_word_gpc.json --out ./results/gpg/word/avg_performance_word_gpc.json
+python scripts/grid_pointing_game/parse_gpg_word.py --folder ./results_gpc/word/ --out-json ./results/all_parsed_word_gpc.json
+python scripts/grid_pointing_game/analysis_word_gpg.py --parsed_json ./results/gpg/word/all_parsed_word_gpc.json --out ./results/gpg/word/avg_performance_word_gpc.json
 ```
 
 **Attribution** — Attribution parsers expect results in specific folder structures; run from the `scripts/attribution/` directory. Analysis scripts (e.g. `analysis_word_attribution.py`, `analysis_celeb_attribution.py`) load parsed JSON from `./results/attribution-*/`.
 
-Replace `word` with `celeb` for the celebrity domain. GPC celeb parsing also accepts `--celeb-cache` for celebrity metadata.
+Replace `word` with `celeb` for the celebrity domain. GPG celeb parsing also accepts `--celeb-cache` for celebrity metadata.
 
 ## Data Format
 
@@ -126,7 +130,6 @@ If you use PerceptualObservatory in your research, please cite:
 }
 ```
 
-(Update the BibTeX entry with your paper details and repository URL.)
 
 ## License
 
