@@ -147,14 +147,13 @@ Stimuli are stored as JSON records with base64-encoded images. Each record typic
 If you use PerceptualObservatory in your research, please cite:
 
 ```bibtex
-@misc{anvekar2025perceptualobservatorycharacterizingrobustness,
-      title={The Perceptual Observatory Characterizing Robustness and Grounding in MLLMs}, 
-      author={Tejas Anvekar and Fenil Bardoliya and Pavan K. Turaga and Chitta Baral and Vivek Gupta},
-      year={2025},
-      eprint={2512.15949},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2512.15949}, 
+@InProceedings{Anvekar_2026_WACV,
+    author    = {Anvekar, Tejas and Bardoliya, Fenil and Turaga, Pavan K. and Baral, Chitta and Gupta, Vivek},
+    title     = {The Perceptual Observatory Characterizing Robustness and Grounding in MLLMs},
+    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {March},
+    year      = {2026},
+    pages     = {1653-1663}
 }
 ```
 
